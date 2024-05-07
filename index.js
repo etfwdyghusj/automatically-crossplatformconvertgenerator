@@ -1,1 +1,9 @@
-const initial = (arr) => arr.slice(0, -1);
+function squareDigits(num) {
+  return parseInt(
+    num
+      .toString()
+      .split("")
+      .map((digit) => digit ** 2)
+      .join(""),
+  );
+}
