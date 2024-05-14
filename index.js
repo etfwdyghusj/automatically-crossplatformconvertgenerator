@@ -1,6 +1,9 @@
-const gcdRecursive = (a, b) => {
-  if (b === 0) {
-    return a;
+function maxProfit(prices) {
+  let minPrice = Infinity;
+  let maxProfit = 0;
+  for (const price of prices) {
+    minPrice = Math.min(minPrice, price);
+    maxProfit = Math.max(maxProfit, price - minPrice);
   }
-  return gcdRecursive(b, a % b);
-};
+  return maxProfit;
+}
